@@ -1,0 +1,20 @@
+# permissions for end users to view stolons.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: stolon-viewer-role
+rules:
+- apiGroups:
+  - stolon.karimi.dev
+  resources:
+  - stolons
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - stolon.karimi.dev
+  resources:
+  - stolons/status
+  verbs:
+  - get

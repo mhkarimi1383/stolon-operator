@@ -1,0 +1,6 @@
+apiVersion: stolon.karimi.dev/v1alpha1
+kind: Stolon
+metadata:
+  name: stolon-sample
+spec:
+  # Add fields here

@@ -1,0 +1,24 @@
+# permissions for end users to edit stolons.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: stolon-editor-role
+rules:
+- apiGroups:
+  - stolon.karimi.dev
+  resources:
+  - stolons
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - stolon.karimi.dev
+  resources:
+  - stolons/status
+  verbs:
+  - get

@@ -1,0 +1,19 @@
+domain: karimi.dev
+layout:
+- go.kubebuilder.io/v3
+plugins:
+  manifests.sdk.operatorframework.io/v2: {}
+  scorecard.sdk.operatorframework.io/v2: {}
+projectName: stolon-operator
+repo: github.com/mhkarimi1383/stolon-operator
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: karimi.dev
+  group: stolon
+  kind: Stolon
+  path: github.com/mhkarimi1383/stolon-operator/api/v1alpha1
+  version: v1alpha1
+version: "3"
